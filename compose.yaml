@@ -1,0 +1,11 @@
+networks:
+  caddy:
+    external: true
+services:
+  web:
+    image: jittawee8/react-demo1
+    container_name: jsr-react
+    ports:
+      - "3000:3000"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
