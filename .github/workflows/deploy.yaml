@@ -60,11 +60,11 @@ jobs:
     needs:
       - build
       - deploy
-    if: failure()
+    if: always()
     steps:
       - name: Discord notification
         env:
           DISCORD_WEBHOOK: https://discord.com/api/webhooks/1421697869458706533/W2UqZa7gD95EU7ixa4gQN3QLz3pWc3oFepvpv16XWxfpuMMTTiqbNULZWrBBmPfPlYBY
         uses: Ilshidur/action-discord@master
         with:
-          args: "Build failed by Alumten"
+          args: "Build by Alumten"
