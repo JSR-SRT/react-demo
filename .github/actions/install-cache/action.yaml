@@ -1,0 +1,11 @@
+name: Install deps and caching
+description: Install deps and caching
+runs:
+  using: composite
+  steps:
+    - name: Clone repo
+      uses: actions/checkout@v5
+    - uses: actions/cache@v4
+    - name: Install deps
+      shell: bash
+      run: npm i
